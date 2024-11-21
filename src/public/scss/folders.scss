@@ -1,0 +1,21 @@
+.folders {
+    display: grid;
+    grid-template-columns: 1fr minmax(162px, auto);
+    grid-template-rows: 36px;
+    grid-template-areas:
+        'title search'
+        'list-folders list-folders'
+    ;
+    gap: 10px;
+    padding-right: 10px;
+    border-right: solid 1px #EFF2FA;
+
+    &__title {
+        grid-area: title;
+        align-self: center;
+    }
+
+    &__search {
+        grid-area: search;
+    }
+}

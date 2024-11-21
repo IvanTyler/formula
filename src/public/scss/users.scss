@@ -1,0 +1,20 @@
+.users {
+    display: grid;
+    grid-template-columns: 1fr minmax(162px, auto);
+    grid-template-rows: 36px;
+    grid-template-areas:
+        'title search'
+        'folder-users-list folder-users-list'
+    ;
+    gap: 10px;
+    padding: 0 10px 0 20px;
+
+    &__title {
+        grid-area: title;
+        align-self: center;
+    }
+
+    &__search {
+        grid-area: search;
+    }
+}

@@ -1,0 +1,82 @@
+.chat-info-control {
+    border-bottom: 10px solid #f2f2f2;
+
+    &__line.link {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        grid-template-areas:
+            'icon link'
+            'icon text'
+        ;
+        align-items: center;
+        gap: 2px 20px;
+        padding: 25px 20px 15px 30px;
+    }
+
+    &__icon {
+        grid-area: icon;
+    }
+
+    &__link {
+        grid-area: link;
+        align-self: end;
+        font-family: var(--font-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        color: #000;
+    }
+
+    &__text {
+        grid-area: text;
+        font-family: var(--font-main);
+        font-size: 14px;
+        font-weight: 400;
+        color: #8D8D8D;
+    }
+
+    &__line.notifications {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        grid-template-areas:
+            'icon text-notifications switch'
+        ;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 20px 28px 30px;
+    }
+
+    &__text.notifications {
+        grid-area: text-notifications;
+        font-family: var(--font-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        color: #000;
+    }
+
+    &__switch.switch {
+        grid-area: switch;
+        width: 42px;
+        height: 22px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        left: 2px;
+        bottom: 2px;
+    }
+
+    input:checked+.slider {
+        background-color: #27AE60;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #27AE60;
+    }
+
+    input:checked+.slider:before {
+        left: -5px;
+    }
+}

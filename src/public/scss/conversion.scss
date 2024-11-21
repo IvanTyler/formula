@@ -1,0 +1,30 @@
+.conversion {
+    overflow: auto;
+    margin-top: 30px;
+
+    .container-conversion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'title calendar'
+            'statistics statistics'
+        ;
+        justify-content: space-between;
+        max-width: 885px;
+        min-width: 885px;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    &__title {
+        justify-self: start;
+        grid-area: title;
+        font-family: var(--font-main);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.78px;
+        color: #212121;
+    }
+
+}

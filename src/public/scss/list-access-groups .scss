@@ -1,0 +1,48 @@
+.folder-users-list {
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 35px;
+    grid-area: folder-users-list;
+
+    &__item {
+        display: grid;
+        grid-template-columns: 35px 1fr 1fr;
+        align-items: center;
+        padding: 10px 0px;
+
+        grid-template-areas:
+            'avatar title name'
+            'avatar sub-title name'
+        ;
+        gap: 10px;
+    }
+
+    &__avatar {
+        grid-area: avatar;
+        font-family: var(--font-main);
+        font-size: 13.61px;
+        font-weight: 400;
+        line-height: 11.67px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__sub-title {
+        grid-area: sub-title;
+    }
+
+    &__name {
+        grid-area: name;
+        justify-self: end;
+        align-self: center;
+        font-family: var(--font-main);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 12px;
+        color: #bdbdbd;
+    }
+}

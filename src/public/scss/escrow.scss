@@ -1,0 +1,102 @@
+.escrow {
+    margin-top: 30px;
+
+    .container-escrow {
+        display: grid;
+        grid-template-columns: 52px 1fr 1fr;
+        grid-template-areas:
+            'money number calendar-escrow'
+            'money title calendar-escrow'
+            'escrow-progress escrow-progress escrow-progress'
+        ;
+        gap: 2px 16px;
+        max-width: 437px;
+        padding: 15px 20px 17px;
+        background-color: #fff;
+        border-radius: 14px;
+    }
+
+    &__money {
+        grid-area: money;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(64, 126, 249, 0.1);
+        width: 52px;
+        height: 52px;
+        border-radius: 8px;
+    }
+
+    &__number {
+        grid-area: number;
+        align-self: center;
+        font-family: var(--font-main);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.2px;
+        color: #30364A;
+    }
+
+    &__title {
+        grid-area: title;
+        align-self: center;
+        font-family: var(--font-main);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.94px;
+        color: #808191;
+    }
+}
+
+.calendar.calendar-escrow {
+    grid-area: calendar-escrow;
+}
+
+
+.escrow-progress {
+    grid-area: escrow-progress;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span 3;
+    gap: 8px;
+    margin-top: 15px;
+
+    &__percent {
+        justify-self: start;
+        font-family: var(--font-main_2);
+        font-size: 12px;
+        font-weight: 700;
+        color: #1E77DB;
+    }
+
+    &__text {
+        justify-self: end;
+        font-family: var(--font-main_2);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16.39px;
+        color: #8D8D8D;
+
+        span {
+            font-family: var(--font-main_2);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16.39px;
+        }
+    }
+
+    &__line {
+        grid-column: 1 / span 2;
+        height: 7px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: #eee;
+    }
+
+    &__progess {
+        border-radius: 5px;
+        height: 100%;
+        width: 79px;
+        background-color: #248AFD;
+    }
+}

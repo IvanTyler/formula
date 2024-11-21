@@ -1,0 +1,17 @@
+.search {
+    height: 36px;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    background-image: url('../icon/company/search.svg');
+    background-repeat: no-repeat;
+    background-position: left 11px center;
+    padding: 10px 10px 10px 35px;
+
+    &::placeholder {
+        font-family: var(--font-main);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.94px;
+        color: #898989;
+    }
+}

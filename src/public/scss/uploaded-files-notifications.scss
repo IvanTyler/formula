@@ -1,0 +1,26 @@
+.uploaded-files-notifications {
+    grid-area: dots;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &:hover {
+        &>div {
+            background-color: #2F80ED;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        background-color: #828282;
+        transition: background-color var(--transition)
+    }
+}

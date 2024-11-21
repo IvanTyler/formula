@@ -1,0 +1,19 @@
+.calendar {
+    grid-area: calendar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #F6F6F6;
+    border-radius: 8px;
+    width: 110px;
+    height: 38px;
+    justify-self: end;
+
+    &__text {
+        font-family: var(--font-main);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+}

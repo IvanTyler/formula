@@ -1,0 +1,31 @@
+.pages {
+    margin-top: 30px;
+
+    .container-pages {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 1490px;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 10px 15px;
+        overflow: auto;
+    }
+
+    &__add-page {
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        padding: 8px 14px 8px 39px;
+        font-family: var(--font-main);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        color: #4C87EC;
+        background-color: #E4EDFC;
+        background-image: url('../icon/plus-blue.svg');
+        background-position: left 17px center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}

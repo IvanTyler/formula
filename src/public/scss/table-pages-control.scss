@@ -1,0 +1,23 @@
+.table-pages-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    gap: 2px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    transition: background-color var(--transition);
+
+
+    &__item {
+        width: 2.5px;
+        height: 2.5px;
+        background-color: #63647D;
+        transition: background-color var(--transition);
+        border-radius: 50%;
+    }
+}

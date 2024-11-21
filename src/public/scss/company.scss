@@ -1,0 +1,15 @@
+.company {
+    overflow: auto;
+    padding-top: 30px;
+
+    .container-company {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(auto, calc(33.333%)));
+        max-width: 1790px;
+        min-width: 1340px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+}

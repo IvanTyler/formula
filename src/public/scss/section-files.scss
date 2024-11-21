@@ -1,0 +1,23 @@
+.section-files {
+    margin-top: 30px;
+    overflow: auto;
+
+    .container-files {
+        position: relative;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: minmax(auto, 113px) minmax(auto, 380px) minmax(auto, 370px) 1fr;
+        max-width: 1363px;
+        min-width: 850px;
+        background-color: #fff;
+        padding: 24px;
+
+        &__close {
+            margin-left: 20px;
+            justify-self: end;
+            top: 29px;
+            right: 29px;
+            cursor: pointer;
+        }
+    }
+}
