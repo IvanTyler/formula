@@ -923,6 +923,10 @@ body {
   content: "";
   position: absolute;
 }
+.statistics__column:first-child > div {
+  height: 203px;
+  align-self: center;
+}
 .statistics__column:first-child > div::before {
   top: 0;
   right: 0;

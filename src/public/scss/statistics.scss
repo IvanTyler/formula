@@ -18,6 +18,8 @@
         }
 
         &:first-child>div {
+            height: 203px;
+            align-self: center;
 
             &::before {
                 top: 0;
