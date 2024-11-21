@@ -20,6 +20,14 @@
         }
     }
 
+    &__item.active {
+        background-color: #E8F1FF;
+
+        &:not(:last-child) {
+            border-bottom: solid 1px darken(#EFF2FA, 5%);
+        }
+    }
+
     &__item.first-subfolder {
         span {
             padding-left: 27px;

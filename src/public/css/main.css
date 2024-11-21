@@ -714,6 +714,12 @@
 .list-folders__item:not(:last-child) {
   border-bottom: solid 1px #EFF2FA;
 }
+.list-folders__item.active {
+  background-color: #E8F1FF;
+}
+.list-folders__item.active:not(:last-child) {
+  border-bottom: solid 1px #dce2f4;
+}
 .list-folders__item.first-subfolder span {
   padding-left: 27px;
 }
