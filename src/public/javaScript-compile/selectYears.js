@@ -1,13 +1,3 @@
-const $listFolders = document.querySelector('.list-folders')
-
-$listFolders?.addEventListener('click', (e) => {
-    const $parent = e.target.closest('.list-folders__item')
-
-    e.target.checked ?
-        $parent.classList.add('active') :
-        $parent.classList.remove('active')
-
-})
 const $calendarSelect = document.querySelector('.calendar-select')
 const $titleYear = document.querySelector('#title-year')
 const $listMonth = document.querySelectorAll('.calendar-select__item')

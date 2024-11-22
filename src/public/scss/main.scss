@@ -10,8 +10,6 @@
 }
 
 :root {
-    --color-main_1: #2F80ED;
-    --color-main_2: #111;
     --font-main: 'Inter';
     --font-main_2: 'Manrope';
     --transition: .3s;
@@ -58,6 +56,8 @@ body {
 @import url('./conversion.scss');
 @import url('./calendar.scss');
 @import url('./statistics.scss');
+@import url('./calendar-select.scss');
+
 // conversion
 
 

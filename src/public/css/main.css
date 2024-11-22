@@ -68,7 +68,59 @@
   background-color: #2F80ED;
   font-family: var(--font-main);
 }
+.calendar-select,
+.calendar-select-conversion {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateY(calc(100% + 5px));
+  background-color: #fff;
+  box-shadow: 0 8px 40px rgba(34, 34, 34, 0.12);
+  border-radius: 12px;
+}
+.calendar-select__item,
+.calendar-select-conversion__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 10px 12px;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.calendar-select__item:not(:last-child),
+.calendar-select-conversion__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+.calendar-select__item:hover,
+.calendar-select-conversion__item:hover {
+  background-color: #F6F6F9;
+}
+.calendar-select__item.active::after,
+.calendar-select-conversion__item.active::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 6px;
+  margin-left: 7px;
+  background-image: url("../icon/selected-icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calendar-select.open,
+.calendar-select-conversion.open {
+  display: block;
+}
 .calendar {
+  position: relative;
   grid-area: calendar;
   display: flex;
   align-items: center;
@@ -85,6 +137,10 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 22px;
+  cursor: pointer;
+}
+.calendar__text br {
+  display: none;
 }
 .chat-info-control {
   border-bottom: 10px solid #f2f2f2;
@@ -800,6 +856,7 @@
 @import url("./conversion.scss");
 @import url("./calendar.scss");
 @import url("./statistics.scss");
+@import url("./calendar-select.scss");
 @import url("./escrow.scss");
 @import url("./calendar.scss");
 @import url("./chat-info.scss");
@@ -827,8 +884,6 @@
 }
 
 :root {
-  --color-main_1: #2F80ED;
-  --color-main_2: #111;
   --font-main: "Inter";
   --font-main_2: "Manrope";
   --transition: .3s;
