@@ -1,18 +1,15 @@
 {
-  "devDependencies": {
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.54.4"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-watch": "^5.0.1",
-    "smooth-scrollbar": "^8.8.4"
-  },
+  "name": "formula",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0",
+    "vite": "^6.0.1"
   }
 }
