@@ -14,46 +14,8 @@
   --blue: #4C87EC;
 }
 
-.staff-structure.under-structure {
-  grid-template-columns: 1fr;
-  max-width: 100%;
-  margin-left: 0;
-  margin-top: 0;
-
-  .staff-structure-item-wrapper {
-    grid-auto-columns: minmax(auto, 146px) 1fr;
-    grid-template-areas:
-      'line'
-      'employee'
-    ;
-
-    .staff-structure-item {
-      &__circle-wrapper {
-        display: none;
-      }
-    }
-
-    &:not(:last-child)::after {
-      content: "";
-      grid-area: line;
-      display: inline-block;
-      background-color: var(--blue);
-      height: 34px;
-      width: 1px;
-      margin-top: 0;
-      margin-left: 24px;
-    }
-
-    &::after {
-      content: "";
-      background-color: var(--blue);
-      height: 34px;
-      width: 1px;
-      margin-top: 0;
-      margin-left: 24px;
-    }
-
-  }
+.container {
+  padding: 20px;
 }
 
 .staff-structure {
@@ -61,7 +23,6 @@
   grid-template-columns: repeat(auto-fit, minmax(auto, calc((100% / 5))));
   max-width: 950px;
   margin-top: 30px;
-  margin-left: 30px;
 
   .staff-structure-item-wrapper {
     display: grid;
@@ -69,7 +30,7 @@
     grid-auto-columns: minmax(auto, 146px) 1fr;
     grid-template-areas: 'employee line';
 
-    &:first-child>div {
+    &:first-child>div:first-child {
       background-color: var(--blue);
 
       h2,
@@ -133,6 +94,11 @@
       padding: 2px;
       border-radius: 50%;
       border: solid 1px var(--blue);
+    }
+
+    &__circle.black,
+    &__line.black {
+      border: solid 1px #1E2029;
     }
 
     &__line {
@@ -207,6 +173,64 @@
   }
 }
 
+.staff-structure.under-structure {
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+
+  .staff-structure-item-wrapper {
+    grid-auto-columns: minmax(auto, 146px) 1fr;
+    grid-template-areas:
+      'line'
+      'employee'
+  ;
+
+    &:first-child>div,
+    &>div {
+      background-color: #fff;
+    }
+
+    &>div {
+      h2 {
+        font-weight: 600;
+      }
+    }
+
+    &:first-child>div {
+      background-color: #fff;
+
+      h2 {
+        font-size: 12px;
+        color: var(--blue);
+        font-weight: 600;
+      }
+
+      span {
+        color: #BDBDBD;
+      }
+    }
+
+    .staff-structure-item {
+      background-color: #fff;
+
+      &__circle-wrapper {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      background-color: var(--blue);
+      height: 34px;
+      width: 1px;
+      margin-top: 0;
+      margin-left: 24px;
+    }
+
+  }
+}
+
 .staff-structure.black {
   .staff-structure-item-wrapper {
 
@@ -218,5 +242,113 @@
         color: #1E2029;
       }
     }
+
+    &::after {
+      background-color: #1E2029;
+    }
   }
 }
+
+.staff-structure.under-structure.black {
+  .staff-structure-item-wrapper {
+    &:first-child>div {
+      background-color: #fff;
+    }
+  }
+}
+
+.staff-structure-tabs-container {
+  max-width: 500px;
+  margin-top: 30px;
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--blue);
+  }
+}
+
+.staff-structure-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-self: center;
+  gap: 20px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #F2F2F2;
+    color: #000;
+    cursor: pointer;
+  }
+
+  &__item.active {
+    background-color: var(--blue);
+    color: #fff;
+  }
+}
+
+.tabs-content {
+  grid-template-columns: repeat(auto-fit, minmax(auto, calc(33.333% - 10px)));
+  gap: 0 20px;
+  max-width: 590px;
+  margin-top: 30px;
+
+   .staff-structure-item-wrapper.tabs-content-item {
+     grid-template-areas:
+       "line"
+       "employee"
+    ;
+
+     &:nth-child(2) {
+       grid-column: 1 / span 3;
+       width: 100%;
+       height: 1px;
+       background-color: var(--blue);
+       &::after {
+         display: none;
+       }
+     }
+
+     &:first-child {
+       grid-column: 1 / span 3;
+       justify-self: center;
+       grid-template-areas:
+         "employee"
+         "line"
+       ;
+
+       &::after {
+         margin-left: -1px;
+       }
+     }
+
+     &::after {
+       width: 1px;
+       height: 28px;
+       justify-self: center;
+       margin-top: 0;
+     }
+
+     .staff-structure-item.first {
+       background-color: rgba(47, 128, 237, 0.1);
+
+       h2, span {
+         color: var(--blue);
+       }
+     }
+   }
+
+  .line {
+      width: 1px;
+      height: 28px;
+      justify-self: center;
+      background-color: var(--blue);
+  }
+}
+
