@@ -10,8 +10,10 @@
   outline: none;
 }
 
+
 :root {
   --blue: #4C87EC;
+  --purple: #9B51E0;
 }
 
 .container {
@@ -87,13 +89,21 @@
     &__circle {
       width: 100%;
       height: 100%;
-      left: 11px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2px;
       border-radius: 50%;
       border: solid 1px var(--blue);
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
     }
 
     &__circle.black,
@@ -118,7 +128,7 @@
         position: absolute;
         display: inline-block;
         width: 1px;
-        height: calc(100% - 4px);
+        height: calc(100% - 8px);
         background-color: var(--blue);
       }
 
@@ -230,6 +240,8 @@
 
   }
 }
+
+
 
 .staff-structure.black {
   .staff-structure-item-wrapper {

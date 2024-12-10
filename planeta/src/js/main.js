@@ -1,10 +1,14 @@
 import '../scss/style.scss'
+import '../scss/user.scss'
 
 const staffStructure = document?.querySelector('.staff-structure')
 
 staffStructure?.addEventListener('click', (e) => {
 
-    if (e.target.classList === 'staff-structure-item__circle-wrapper' || 'staff-structure-item__circle') {
-        console.log(e.target.classList)
-    }
+    const parent = e.target.closest('.staff-structure-item')
+    const circle = parent.querySelector('.staff-structure-item__circle')
+
+    circle.classList.contains('show') ?
+        circle.classList.remove('show') :
+        circle.classList.add('show')
 })
