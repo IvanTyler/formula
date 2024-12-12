@@ -1,0 +1,38 @@
+.under-structure-item {
+  display: grid;
+  grid-template-areas:
+      'wrapper-avatar name'
+      'job-title job-title'
+;
+  grid-template-columns: 20px 1fr;
+  width: 161px;
+  background-color: #fff;
+
+
+  &__wrapper-avatar {
+    grid-area: wrapper-avatar;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 5px;
+  }
+
+  h2 {
+    align-self: center;
+    grid-area: name;
+  }
+
+  span {
+    grid-area: job-title;
+    color: #BDBDBD;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}

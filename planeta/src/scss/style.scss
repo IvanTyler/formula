@@ -25,162 +25,6 @@
   grid-template-columns: repeat(auto-fit, minmax(auto, calc((100% / 5))));
   max-width: 950px;
   margin-top: 30px;
-
-  .staff-structure-item-wrapper {
-    display: grid;
-    align-self: start;
-    grid-auto-columns: minmax(auto, 146px) 1fr;
-    grid-template-areas: 'employee line';
-
-    &:first-child>div:first-child {
-      background-color: var(--blue);
-
-      h2,
-      span {
-        color: #fff;
-      }
-    }
-
-    &:not(:last-child)::after {
-      content: '';
-      grid-area: line;
-      display: inline-block;
-      margin-top: 10px;
-      background-color: var(--blue);
-      height: 1px;
-    }
-
-  }
-
-  .staff-structure-item {
-    position: relative;
-    grid-area: employee;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: solid 1px var(--blue);
-    background-color: rgb(47, 128, 237, 0.1);
-
-    &__title {
-      font-size: 12px;
-      color: var(--blue);
-      font-weight: 400;
-    }
-
-    &__name {
-      font-size: 14px;
-      color: #4C87EC;
-      font-weight: 600;
-    }
-
-    &__circle-wrapper {
-      position: absolute;
-      bottom: -8.5px;
-      padding: 2px;
-      background-color: #fff;
-      cursor: pointer;
-      height: 17px;
-      width: 17px;
-      border-radius: 50%;
-    }
-
-    &__circle {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2px;
-      border-radius: 50%;
-      border: solid 1px var(--blue);
-
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-      }
-    }
-
-    &__circle.black,
-    &__line.black {
-      border: solid 1px #1E2029;
-    }
-
-    &__line {
-      border-radius: 10px;
-      height: 1px;
-      width: 100%;
-      background-color: var(--blue);
-    }
-
-    &__circle.show {
-      &>div {
-        border-radius: 0;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        width: 1px;
-        height: calc(100% - 8px);
-        background-color: var(--blue);
-      }
-
-    }
-  }
-
-  .staff-structure-item.black {
-    border: solid 1px #1E2029;
-    background-color: #fff;
-
-    h2,
-    span {
-      color: #1E2029;
-    }
-  }
-
-  .under-structure-item {
-    display: grid;
-    grid-template-areas:
-      'wrapper-avatar name'
-      'job-title job-title'
-    ;
-    grid-template-columns: 20px 1fr;
-    width: 161px;
-
-    &__wrapper-avatar {
-      grid-area: wrapper-avatar;
-      height: 20px;
-      width: 20px;
-      overflow: hidden;
-      border-radius: 50%;
-    }
-
-    &__avatar {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      margin-right: 5px;
-    }
-
-    h2 {
-      align-self: center;
-      grid-area: name;
-    }
-
-    span {
-      grid-area: job-title;
-      color: #BDBDBD;
-      font-weight: 400;
-      font-size: 12px;
-    }
-  }
 }
 
 .staff-structure.under-structure {
@@ -194,12 +38,7 @@
     grid-template-areas:
       'line'
       'employee'
-  ;
-
-    &:first-child>div,
-    &>div {
-      background-color: #fff;
-    }
+    ;
 
     &>div {
       h2 {
@@ -242,19 +81,8 @@
 }
 
 
-
 .staff-structure.black {
   .staff-structure-item-wrapper {
-
-    &:first-child>div {
-      background-color: rgb(30, 32, 41, 0.1);
-
-      h2,
-      span {
-        color: #1E2029;
-      }
-    }
-
     &::after {
       background-color: #1E2029;
     }
@@ -280,30 +108,6 @@
   }
 }
 
-.staff-structure-tabs {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-self: center;
-  gap: 20px;
-
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    line-height: 17px;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: #F2F2F2;
-    color: #000;
-    cursor: pointer;
-  }
-
-  &__item.active {
-    background-color: var(--blue);
-    color: #fff;
-  }
-}
 
 .tabs-content {
   grid-template-columns: repeat(auto-fit, minmax(auto, calc(33.333% - 10px)));
@@ -322,9 +126,6 @@
        width: 100%;
        height: 1px;
        background-color: var(--blue);
-       &::after {
-         display: none;
-       }
      }
 
      &:first-child {
@@ -347,13 +148,6 @@
        margin-top: 0;
      }
 
-     .staff-structure-item.first {
-       background-color: rgba(47, 128, 237, 0.1);
-
-       h2, span {
-         color: var(--blue);
-       }
-     }
    }
 
   .line {

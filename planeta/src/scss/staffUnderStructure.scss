@@ -1,0 +1,31 @@
+.staff-under-structure {
+  max-width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+
+  .staff-structure-item-wrapper {
+
+    &>div {
+      h2 {
+        font-weight: 600;
+      }
+    }
+
+    .staff-structure-item {
+
+      &__circle-wrapper {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      background-color: var(--blue);
+      height: 34px;
+      width: 1px;
+      margin-top: 0;
+      margin-left: 24px;
+    }
+  }
+
+}

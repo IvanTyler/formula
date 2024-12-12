@@ -1,0 +1,23 @@
+.staff-structure-item-wrapper {
+  display: grid;
+  align-self: start;
+  grid-auto-columns: minmax(auto, 146px) 1fr;
+  grid-template-areas: 'employee line';
+
+  &:not(:last-child)::after {
+    content: '';
+    grid-area: line;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--blue);
+    height: 1px;
+  }
+}
+
+.staff-structure-item-wrapper.substructure {
+  grid-auto-columns: minmax(auto, 146px) 1fr;
+  grid-template-areas:
+      'line'
+      'employee'
+  ;
+}

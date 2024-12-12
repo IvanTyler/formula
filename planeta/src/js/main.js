@@ -1,5 +1,11 @@
 import '../scss/style.scss'
 import '../scss/user.scss'
+import '../scss/staffStructureItem.scss'
+import '../scss/staffStructureItemWrapper.scss'
+import '../scss/staffUnderStructure.scss'
+import '../scss/underStructureItem.scss'
+import '../scss/staffStructureTabs.scss'
+
 
 const staffStructure = document?.querySelector('.staff-structure')
 
